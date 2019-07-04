@@ -9,7 +9,6 @@ class Student
     # binding.pry
       self.send("#{key}=", value)
    end
-    
     @@all << self
   end
 

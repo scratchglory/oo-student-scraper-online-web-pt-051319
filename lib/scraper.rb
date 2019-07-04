@@ -31,7 +31,7 @@ class Scraper
     
     profile_quote = doc.css(".profile-quote").text 
     bio = doc.css(".bio-content .description-holder p").text.strip 
-    students = {:bio => bio, :profile_quote => profile_quote}                             # wants a hash
+    students = {:bio => bio, :profile_quote => profile_quote}                     # wants a hash
     
     student_profile = doc.css("div.social-icon-container a")
     student_profile.map do |student|
@@ -47,6 +47,7 @@ class Scraper
         end
       end
        students
+       binding.pry
   end
 end
 
